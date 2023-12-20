@@ -26,13 +26,16 @@ public class LoginPage {
 	}
 	
 	//Action
-	public void loginIntoApp(String strUser,String strPwd) {
+	public void loginIntoApp(String strUser,String strPwd) throws InterruptedException {
 		logIn.click();
 		TestBase.manualWait();
+		Thread.sleep(1000);
 		userId.sendKeys(strUser);
 		TestBase.manualWait();
+		Thread.sleep(1000);
 		pwd.sendKeys(strPwd);
 		TestBase.manualWait();
+		Thread.sleep(1000);
 		loginBtn.click();
 	}
 

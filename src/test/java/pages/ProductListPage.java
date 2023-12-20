@@ -59,12 +59,14 @@ public class ProductListPage {
 	}
 	
 	//view cart
-	public void viewCart() {
+	public void viewCart() throws InterruptedException {
+		Thread.sleep(2000);
 		cartPage.click();
 	}
 	
 	//verify on checkout page
-	public boolean isLoggedIn() {
+	public boolean isLoggedIn() throws InterruptedException {
+		Thread.sleep(2000);
 		return userTitle.isDisplayed();
 	}
 

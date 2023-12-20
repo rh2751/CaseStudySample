@@ -5,20 +5,20 @@ Given User is on login Page
 When User enters "rhande" and "Qwerty"
 Then User should be on Home page
 
-#@SmokeTest
+@SmokeTest
 Scenario: Add Item to cart
 Given User should be on Home page
 When User add item to cart
 Then Item must be added
 
-#@SmokeTest
+@RegressionTest
 Scenario: Delete Item from cart
 Given User should be on Home page
 When Item should be present in cart
 Then User delete item from cart
 
-#@RegressionTest
-#Scenario: Checkout Order
-#Given User is on cart page
-#When User do checkout
-#Then Should navigate to Checkout page
+@SmokeTest
+Scenario: Checkout Order
+Given User is on cart page
+When User do Purchase
+Then Should navigate to Purchase page
